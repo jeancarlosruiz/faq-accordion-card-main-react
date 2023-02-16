@@ -33,9 +33,15 @@ function QuestionSection() {
   return (
     <section className="questions-list">
       <h2 className="visually-hidden">(Questions and Answers)</h2>
-      {data.map((faq, index) => (
-        <QuestionItem key={index} question={faq.question} answer={faq.answer} />
-      ))}
+      <dl>
+        {data.map((faq, index) => (
+          <QuestionItem
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+          />
+        ))}
+      </dl>
     </section>
   );
 }
